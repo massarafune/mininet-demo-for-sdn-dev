@@ -1,7 +1,7 @@
 from mininet.log import setLogLevel
 from mininet.net import Mininet
 from mininet.cli import CLI
-from mininet.cli import MinimalTopo
+from mininet.topo import MinimalTopo
 
 setLogLevel('info')
 
