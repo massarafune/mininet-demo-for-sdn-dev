@@ -19,24 +19,23 @@ You can run scripts or commands in the xterm window or type commands in mininet 
 (e.g. mininet> h1 ping h2)  
 
 ## Run simulated DDOS packet injection attack
-ddos-randip.py uses Scapy module to spoof its IP address.  
-[Scapy](https://github.com/secdev/scapy)  
+ddos-randip.py uses [Scapy](https://github.com/secdev/scapy) module to spoof its IP address.  
 To run the script you need to install Scapy module locally
 ```sh
 sudo apt install python3-scapy
 ```
-At the time of writing this, scapy version 2.4.3 was tested in the script with Ubuntu 20.04  
+At the time of writing this, scapy version 2.4.3 was latest, and it is tested with Ubuntu 20.04  
 
 ### Basic usage of the file
 ```sh
-usage: sudo python3 ddos-randip.py [--random] [--dest <ip>] [--time <duration of ddos attack>] [--help]
+usage: sudo python3 ddos-randip.py [--random] [--dest <ip>] [--time <duration of packet injection attack>] [--help]
 
 optional arguments:
   -h, --help            show this help message and exit
   -r, --random          use random IP for destination
   -d DSTIP, --dest DSTIP
                         use specific IP for destination
-  -t TIME, --time TIME  specify duration of ddos attack in seconds
+  -t TIME, --time TIME  specify duration of packet injection attack in seconds
 ```
 It automatically randomises source IP address. By adding -r, --random flag, destination IP address will be randomised.  
 --time is a mandatory option which specify the duration of the attack, and either -r or -d is required as well.  

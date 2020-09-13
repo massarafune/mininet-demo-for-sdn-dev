@@ -29,11 +29,11 @@ def send_packet(dstIP='', rand=False, inter=0.01):
 
 
 def ddos_attack():
-    usage = 'sudo python3 ddos-randip.py [--random] [--dest <ip>] [--time <duration of ddos attack>] [--help]'
+    usage = 'sudo python3 ddos-randip.py [--random] [--dest <ip>] [--time <duration of packet injection attack>] [--help]'
     argparser = ArgumentParser(usage=usage)
     argparser.add_argument('-r', '--random', action='store_true', help='use random IP for destination')
     argparser.add_argument('-d', '--dest', type=str, dest='dstIP' , help='use specific IP for destination')
-    argparser.add_argument('-t', '--time', type=int, dest='time',required=True, help='specify duration of ddos attack in seconds')
+    argparser.add_argument('-t', '--time', type=int, dest='time',required=True, help='specify duration of packet injection attack in seconds')
     args = argparser.parse_args()
 
     t_end = time.time() + args.time
@@ -67,7 +67,7 @@ if __name__ == '__main__':
     except PermissionError:
         print('Permission Error....')
         print('This program requires administrative permission')
-        print('Usage: sudo python3 ddos-randip.py [--random] [--dest <ip>] [--time <duration of ddos attack>] [--help]')
+        print('Usage: sudo python3 ddos-randip.py [--random] [--dest <ip>] [--time <duration of packet injection attack>] [--help]')
         exit(1)
     except KeyboardInterrupt:
         print('\nTerminating the program.....')
