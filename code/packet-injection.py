@@ -28,8 +28,8 @@ def send_packet(dstIP='', rand=False, inter=0.01):
     send(ip/icmp, inter=inter)
 
 
-def ddos_attack():
-    usage = 'sudo python3 ddos-randip.py [--random] [--dest <ip>] [--time <duration of packet injection attack>] [--help]'
+def packet_injection():
+    usage = 'sudo python3 packet-injection.py [--random] [--dest <ip>] [--time <duration of packet injection attack>] [--help]'
     argparser = ArgumentParser(usage=usage)
     argparser.add_argument('-r', '--random', action='store_true', help='use random IP for destination')
     argparser.add_argument('-d', '--dest', type=str, dest='dstIP' , help='use specific IP for destination')
@@ -60,14 +60,14 @@ if __name__ == '__main__':
     t_start = time.time()
 
     try:
-        num = ddos_attack()
+        num = packet_injection()
         t_end = time.time()
         duration = t_end - t_start
         print_summary(num, duration)
     except PermissionError:
         print('Permission Error....')
         print('This program requires administrative permission')
-        print('Usage: sudo python3 ddos-randip.py [--random] [--dest <ip>] [--time <duration of packet injection attack>] [--help]')
+        print('Usage: sudo python3 packet_injection.py [--random] [--dest <ip>] [--time <duration of packet injection attack>] [--help]')
         exit(1)
     except KeyboardInterrupt:
         print('\nTerminating the program.....')
