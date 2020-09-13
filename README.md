@@ -43,5 +43,4 @@ It automatically randomises source IP address. By adding -r, --random flag, dest
 This file is meant to be used within SDN network simulator to cause southbound API flooding.  
 
 By combining mininet, it simply simulates packet injection attacks against a SDN switch.  
-[![asciicast](https://asciinema.org/a/fxVkzdb2RsYQdrzKJR4TeF8Jr.svg)](https://asciinema.org/a/fxVkzdb2RsYQdrzKJR4TeF8Jr)  
-
+[![asciicast](https://asciinema.org/a/359459.svg)](https://asciinema.org/a/359459)
