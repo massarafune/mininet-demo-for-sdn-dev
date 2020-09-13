@@ -29,7 +29,7 @@ def send_packet(dstIP='', rand=False, inter=0.01):
 
 
 def ddos_attack():
-    usage = 'Usage: sudo python3 ddos-randip.py [--random] [--dest <ip>] [--time <duration of ddos attack>] [--help]'
+    usage = 'sudo python3 ddos-randip.py [--random] [--dest <ip>] [--time <duration of ddos attack>] [--help]'
     argparser = ArgumentParser(usage=usage)
     argparser.add_argument('-r', '--random', action='store_true', help='use random IP for destination')
     argparser.add_argument('-d', '--dest', type=str, dest='dstIP' , help='use specific IP for destination')
