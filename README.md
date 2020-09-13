@@ -18,8 +18,8 @@ it will automatically open xterm windows for each of the nodes
 You can run scripts or commands in the xterm window or type commands in mininet terminal  
 (e.g. mininet> h1 ping h2)  
 
-## Run simulated DDOS packet injection attack
-ddos-randip.py uses [Scapy](https://github.com/secdev/scapy) module to spoof its IP address.  
+## Run simulated packet injection attack
+packet-injection.py uses [Scapy](https://github.com/secdev/scapy) module to spoof its IP address.  
 To run the script you need to install Scapy module locally
 ```sh
 sudo apt install python3-scapy
@@ -28,7 +28,7 @@ At the time of writing this, scapy version 2.4.3 was latest, and it is tested wi
 
 ### Basic usage of the file
 ```sh
-usage: sudo python3 ddos-randip.py [--random] [--dest <ip>] [--time <duration of packet injection attack>] [--help]
+usage: sudo python3 packet-injection.py [--random] [--dest <ip>] [--time <duration of packet injection attack>] [--help]
 
 optional arguments:
   -h, --help            show this help message and exit
